@@ -15,7 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import {
-  CircleDollarSign,
+  IndianRupee,
   Users,
   Percent,
   Minus,
@@ -106,9 +106,9 @@ export function TipCalculator() {
   }
 
   const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat("en-US", {
+    return new Intl.NumberFormat("en-IN", {
       style: "currency",
-      currency: "USD",
+      currency: "INR",
     }).format(value);
   };
 
@@ -125,7 +125,7 @@ export function TipCalculator() {
               <div className="space-y-2">
                 <Label htmlFor="bill-amount">Bill Amount</Label>
                 <div className="relative">
-                  <CircleDollarSign className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                  <IndianRupee className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                   <Input
                     id="bill-amount"
                     type="number"
